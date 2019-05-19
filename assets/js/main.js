@@ -1,3 +1,5 @@
+// Paralax Effect
+// https://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
 $(function(){
   const $window = $(window);
   $('section[data-type="background"]').each(function(){

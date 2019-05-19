@@ -4,14 +4,10 @@ Salmon: #dd5638
 Blue Grey: #3e4249
  */
 
-
-html {
-}
-
 /* GENERAL */
 
 body {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 16px;
   background: url('../img/tile.jpg') top left repeat;
@@ -20,7 +16,7 @@ body {
 h1, h2, h3, h4, h5, h6{
   -webkit-font-smothing: antialiased;
   text-rendering: optimizelegibility;
-  font-weigh: bold;
+  font-weight: bold;
 }
 h1{
   font-size: 3em;
@@ -47,8 +43,8 @@ button, input, .btn, a.btn{
   border-collapse: #d95131;
 }
 .site-header {
-  padding-bottom: 9px;
-  margin: 0 0 20px;
+  /* padding-bottom: 9px; */
+  margin: 0;
   border-bottom: 1px solid #eee;
 }
 img{
