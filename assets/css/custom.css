@@ -5,14 +5,15 @@ Blue Grey: #3e4249
  */
 
 /* GENERAL */
-
+*, ::after, ::before {
+  box-sizing: border-box;
+}
 body {
-  /* margin-top: 50px; */
+  margin-top: 50px;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 16px;
   background: url('../img/tile.jpg') top left repeat;
 }
-
 h1, h2, h3, h4, h5, h6{
   -webkit-font-smothing: antialiased;
   text-rendering: optimizelegibility;
@@ -38,6 +39,17 @@ button, input, .btn, a.btn{
 .btn{
   font-weight: bold;
 }
+.btn:focus {
+	outline: none;
+}
+.btn-success {
+	background: #79b044;
+	border: none;
+}
+.btn-success:hover{
+  background: #6a9b3d;
+  border-color: #6a9b3d;
+}
 .btn-danger{
   background-color: #dd5639;
   border-collapse: #d95131;
@@ -47,27 +59,41 @@ button, input, .btn, a.btn{
   margin: 0;
   border-bottom: 1px solid #eee;
 }
+.nav-item.active{
+  box-sizing: border-box;
+  background-color: #080808;
+}
 img{
   max-width: 100%;
+}
+.modal-content{
+  background: url('../img/tile.jpg') top left repeat;
 }
 /* HERO */
 
 #hero{
-  background: url('../img/hero-bg.jpg') 50% 0 repeat fixed;
-  min-height: 500px;
-  padding: 40px 0;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
+	background: url('../img/hero-bg.jpg') 50% 0 repeat fixed;
+	min-height: 500px;
+	position: relative;
+	display: table;
+	width: 100%;
+	padding: 40px 0;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
 }
 #hero .hero-text{
   margin-top: 30px;
 }
-#hero article{
+#hero article { 
   width: 100%;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
-
+#hero .hero-text {
+	margin-top: 00px;
+}
 #price-timeline{
   margin: 30px 0  60px;
   text-align: center;
@@ -77,6 +103,9 @@ img{
   background: #3e4249;padding: 10px 20px 30px;
   position: relative;
   vertical-align: top;
+}
+#price-timeline .price.active {
+	background: #dd5638;
 }
 #price-timeline .price span{
   background: #101010;
@@ -105,7 +134,24 @@ img{
 }
 
 /* LAYOUT */
-
+.row + .row{
+  margin-top: 20px;
+}
+.section{
+  padding: 80px 0;
+}
+.section-header {
+  text-align: center;
+}
+.section h2{
+  margin: 20px 0 40px;
+}
+.section h3{
+  margin: 30px 0 10px;
+}
+.section.main-content {
+  padding: 40px 0;
+}
 #optin{
   background: #3e4249;
   padding: 20px 0;
@@ -117,3 +163,58 @@ img{
 #optin p{
   margin: 7px 0 0 0;
 }
+#course-features {
+	background: #3e4249;
+	color: white;
+	text-align: center;
+}
+#who-benefits{
+  background: white;
+}
+#course-features{
+  background: #3e4249;
+  color: white;
+  text-align: center;
+}
+#project-features{
+  text-align:center;
+}
+#featurette{
+  background: url('../img/stuff-bg.jpg') 50% 100% repeat fixed;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+#instructor{
+  background: white url('../img/elvis.png') 90% -10px no-repeat;
+}
+#instructor .num{
+  display:table;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  line-height: 24px;
+  height: 140px;
+  width: 140px;
+  text-aling: center;
+  background: #dd5638;
+  -webkit-border-radius: 100%
+  -
+}
+
+/* CUSTOM ICON SPRITES */
+i.ci{
+  display: inline-block;
+  height: 40px;
+  width: 30ps;
+  background: url('../img/icon-sprite.png');
+}
+.ci.ci-computer {background-position: 0 0 ;}
+.ci.ci-watch {background-position: -40px 0;}
+.ci.ci-calendar {background-position: -80px 0;}
+.ci.ci-community {background-position: -120px 0;}
+.ci.ci-instructor {background-position: -160px 0;}
+.ci.ci-device {background-position: -200px 0;}
+
+
+/* FORMS */
